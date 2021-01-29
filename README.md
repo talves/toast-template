@@ -1,4 +1,10 @@
-# Welcome to your new Toast site!
+# Welcome to your new [Toast][toast] site!
+
+## Get this template
+
+```bash
+npx create-toast talves/toast-template my-toast-site
+```
 
 ## scripts
 
@@ -31,3 +37,5 @@ The site build command runs a full Toast build and outputs the results in `publi
 ```shell
 npm run build:site
 ```
+
+[toast]: https://toast.dev
