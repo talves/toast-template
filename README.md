@@ -8,6 +8,24 @@ npx create-toast talves/toast-template my-toast-site
 
 ## scripts
 
+### gulp
+
+This template is using Gulp for development workflow as an option.
+
+The default command uses `browser-sync` and watches css and source paths for rebuild
+
+```shell
+gulp
+```
+
+Command include (default order):
+
+```shell
+gulp css
+gulp toast
+gulp watchAll
+```
+
 ### npm run postinstall
 
 The postinstall script will run whenever you install the dependencies for a project. It handles converting any legacy 3rd party commonjs dependencies into browser-runnable ESM. The resulting ESM files are placed in `./public/web_modules/*` and can be cached if you wish (as long as you re-run postinstall when you install new dependencies).
