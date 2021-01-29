@@ -25,7 +25,12 @@ export const sourceData = async ({ setDataForSlug }) => {
     directory: "./data/settings",
     extensions: ["json"],
   });
+  const navigationFiles = await fetchFilesFromDisk({
+    directory: "./data/navigation",
+    extensions: ["json"],
+  });
   const settings = getFilesObject(settingsFiles);
+  settings.navigation = getFilesObject(navigationFiles);
   await setDataForSlug("/settings", { data: { ...settings } });
 
   /* gets mdx content and sets the slug for the content */
