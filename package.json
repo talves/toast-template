@@ -9,19 +9,22 @@
   "scripts": {
     "clean": "rm -rf ./.tmp && rm -rf ./public",
     "start": "NODE_ENV=production yarn gulp",
-    "postinstall": "breadbox --dest public/web_modules",
-    "build": "yarn build:css && yarn build:site",
-    "build:css": "postcss --config legacy-commonjs index.css -o public/styles.css --env production",
+    "postinstall": "node ./postinstall.js",
+    "build": "yarn postinstall && yarn build:css && yarn build:site",
+    "build:css": "postcss --config legacy-commonjs src/index.css -o public/styles.css --env production",
     "build:site": "toast incremental ."
   },
   "dependencies": {
     "@mdx-js/preact": "^1.6.22",
-    "@sector/breadbox": "^0.0.4",
     "@toastdotdev/mdx": "^0.1.5",
     "autoprefixer": "10.2.3",
+    "console.table": "^0.10.0",
+    "esinstall": "^1.0.5",
     "postcss": "^8.2.4",
     "postcss-cli": "^8.3.1",
     "preact": "^10.5.12",
+    "pretty-bytes": "^5.5.0",
+    "react-helmet": "^6.1.0",
     "tailwindcss": "^2.0.2",
     "toast": "^0.3.41"
   },
