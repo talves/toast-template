@@ -16,17 +16,17 @@
   },
   "dependencies": {
     "@mdx-js/preact": "^1.6.22",
-    "@toastdotdev/mdx": "^0.1.5",
+    "@toastdotdev/mdx": "^0.2.4",
     "autoprefixer": "10.2.3",
     "console.table": "^0.10.0",
-    "esinstall": "^1.0.5",
+    "esinstall": "^1.1.7",
     "postcss": "^8.2.4",
     "postcss-cli": "^8.3.1",
     "preact": "^10.5.12",
     "pretty-bytes": "^5.5.0",
     "react-helmet": "^6.1.0",
     "tailwindcss": "^2.0.2",
-    "toast": "^0.3.41"
+    "toast": "^0.3.43"
   },
   "devDependencies": {
     "browser-sync": "^2.26.13",
