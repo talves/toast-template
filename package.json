@@ -26,7 +26,7 @@
     "pretty-bytes": "^5.6.0",
     "react-helmet": "^6.1.0",
     "tailwindcss": "^2.0.2",
-    "toast": "^0.3.43"
+    "toast": "^0.3.47"
   },
   "devDependencies": {
     "browser-sync": "^2.26.13",
@@ -34,20 +34,8 @@
     "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0"
   },
-  "snowpack": {
-    "exclude": [
-      "gulpfile.js",
-      "public/**/*",
-      "toast.js"
-    ],
-    "installOptions": {
-      "alias": {
-        "react": "preact/compat"
-      }
-    },
-    "knownEntrypoints": [
-      "preact/hooks",
-      "preact"
-    ]
+  "resolutions": {
+    "@mdx-js/mdx": "2.0.0-next.8",
+    "remark-mdx": "2.0.0-next.8"
   }
 }
