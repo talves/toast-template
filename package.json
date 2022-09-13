@@ -33,6 +33,7 @@
     "execa": "^4.1.0",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",
+    "postcss-import": "^15.0.0",
     "pretty-bytes": "^5.5.0"
   }
 }
