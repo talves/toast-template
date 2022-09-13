@@ -5,7 +5,7 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: ["./src/**/*.js", "./content/**/*.mdx"],
+  content: ["./src/**/*.js", "./content/**/*.mdx"],
   theme: {},
   variants: {},
   plugins: [
