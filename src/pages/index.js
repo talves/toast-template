@@ -1,10 +1,17 @@
 import { h } from "preact";
-import { Box } from "../components/index.js"
+import { Box, Nav } from "../components/index.js";
+import { useSiteData } from "../site-data-provider.js";
 
-export default (props) => (
-  <Box class="min-h-full">
-    <div>
-      <a href="https://github.com/talves/toast-template">talves/toast-template</a>
-    </div>
-  </Box>
-);
+export default (props) => {
+  const data = useSiteData();
+  return (
+    <Box class="bg-gray-400 font-sans leading-normal tracking-normal">
+      <Nav />
+      <div>
+        <pre>
+          {JSON.stringify(data, null, 2)}
+        </pre>
+      </div>
+    </Box>
+  );
+};
