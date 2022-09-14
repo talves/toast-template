@@ -1,4 +1,5 @@
 // const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   future: {
@@ -41,6 +42,12 @@ module.exports = {
         700: "#2D444E",
         800: "#253941",
         900: "#1E2E34",
+      },
+    },
+    extend: {
+      colors: {
+        brandblue: colors.blue[500],
+        brandred: colors.red[300],
       },
     },
   },
