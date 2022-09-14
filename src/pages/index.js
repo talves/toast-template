@@ -6,7 +6,7 @@ export default (props) => {
   const data = useSiteData();
   return (
     <Box class="bg-gray-400 font-sans leading-normal tracking-normal">
-      <Nav />
+      <Nav menu={data?.navigation?.menu}/>
       <Example header={data?.header}/>
       <div>
         <pre>

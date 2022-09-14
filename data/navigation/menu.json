@@ -9,7 +9,7 @@
     },
     {
       "path": "/data",
-      "hidden": true,
+      "hidden": false,
       "label": "Data",
       "type": "route",
       "heading": "default"
