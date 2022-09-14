@@ -48,6 +48,7 @@ module.exports = {
       colors: {
         brandblue: colors.blue[500],
         brandred: colors.red[300],
+        brandpurple: colors.purple[500],
       },
     },
   },

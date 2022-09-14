@@ -50,7 +50,7 @@ function watchAll(cb) {
   });
   watch("src/**/*.css", css);
   watch(
-    ["src/**/*.js", "src/**/*.mdx", "content/**/*.mdx", "data/**/*.json"],
+    ["src/**/*.js", "src/**/*.mdx", "content/**/*.mdx", "data/**/*.json", "legacy-commonjs/tailwind.config.js"],
     series(clean, css, toast)
   );
   cb();
