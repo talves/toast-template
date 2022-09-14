@@ -40,7 +40,6 @@ export const SiteDataProvider = ({ data = {}, url, children }) => {
 
   useEffect(() => {
     if (!url) return;
-    console.log("Fetching data")
     fetch(url).then((response) => {
       response.json().then((data) => {
         updateContext({
