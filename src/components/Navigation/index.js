@@ -4,10 +4,14 @@ import Nav from "./Nav.js";
 import NavItem from "./NavItem.js";
 
 const Navigation = (props) => {
-  const data = props.data;
+  const { data, toggle } = props;
 
   return (
-    <Box class={`divide-y divide-gray-100 ${props.class}`}>
+    <Box
+      as="nav"
+      id="navbar-default"
+      class={`fixed top-12 bottom-0 ${toggle ? "right-0" : "-right-full"} w-52 md:static ${props.class} transition-all duration-300`}
+    >
       <Nav>
         {data.menu &&
           data.menu &&
