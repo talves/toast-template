@@ -4,7 +4,7 @@ import { Box } from "../Box.js";
 
 const NavigationBarWrapper = (props) => {
   return (
-    <Box as="header" {...props} className={props.className}>
+    <Box as="header" {...props} class={props.className}>
       {props.children}
     </Box>
   );
@@ -71,7 +71,7 @@ const NavigationBar = (props) => {
         </Box>
         <MenuButton onToggle={props.onToggle}/>
         {props.children}
-        <Box className="float-right absolute right-0">
+        <Box class="float-right absolute right-0">
           <ThemeSwitcher displayMode={false} />
         </Box>
       </Box>

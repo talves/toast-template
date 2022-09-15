@@ -45,7 +45,7 @@ export default ({ children, ...props }) => {
       </Helmet>
       <Header header={props.header} data={data?.navigation}/>
       <Main {...props}>{children}</Main>
-      <Footer />
+      <Footer data={data?.navigation?.footer} />
     </FlexLayout>
   );
 };

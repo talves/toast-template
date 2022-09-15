@@ -9,9 +9,10 @@ const FooterWrapper = (props) => (
 );
 
 export default (props) => {
+  
   return (
     <FooterWrapper>
-      <FooterSection />
+      <FooterSection data={props?.data} />
     </FooterWrapper>
   );
 };
