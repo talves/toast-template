@@ -34,10 +34,16 @@ export const sourceData = async ({ setDataForSlug }) => {
   await setDataForSlug("/settings", { data: { ...settings } });
 
   /* gets mdx content and sets the slug for the content */
-  await sourceMdx({
+  const allMdx = await sourceMdx({
     setDataForSlug,
     directory: "./content",
     slugPrefix: "/",
   });
+
+  // use mdx data for the posts route
+  await setDataForSlug("/posts", {
+    data: { posts: allMdx },
+  });
+
   return;
 };

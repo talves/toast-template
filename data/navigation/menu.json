@@ -22,9 +22,9 @@
       "heading": "default"
     },
     {
-      "path": "/a-post",
+      "path": "/posts",
       "hidden": false,
-      "label": "Mdx Post",
+      "label": "Posts",
       "type": "page",
       "heading": "default"
     }

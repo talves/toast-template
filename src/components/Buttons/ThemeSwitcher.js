@@ -82,7 +82,7 @@ export const ThemeSwitcher = ({ as = "div", ...props }) => {
         </svg>
         <svg
           id="theme-toggle-light-icon"
-          class={`w-5 h-5 ${
+          class={`w-7 h-7 ${
             toggleClass === "dark" ? "hidden" : ""
           } fill-primary-600 dark:fill-gray-200`}
           viewBox="0 0 20 20"

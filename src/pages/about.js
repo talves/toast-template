@@ -5,11 +5,12 @@ import { useSiteData } from "../site-data-provider.js";
 export default (props) => {
   const data = useSiteData();
   return (
-    <Box>
-      <Box as="div" class="bg-header">
-        Site Data JSON
+    <Box class="min-h-screen">
+      <Box as="div" class="h-20 items-center">
+        <Box as="h1" class="text-center">
+          About
+        </Box>
       </Box>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
     </Box>
   );
 };

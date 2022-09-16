@@ -19,13 +19,13 @@ const AppWrapper = ({ children, ...props }) => (
 );
 
 const PageWrapper = (props) => (
-  <MainWrapper class="bg-default flex md:flex-col lg:flex-row justify-center">
+  <MainWrapper class="bg-default flex md:flex-col lg:flex-row justify-center dark:bg-gray-700 dark:text-gray-300">
     <Container class="w-full">{props.children}</Container>
   </MainWrapper>
 );
 
 const ListPageWrapper = (props) => (
-  <MainWrapper class="min-h-screen bg-default flex md:flex-col lg:flex-row justify-center">
+  <MainWrapper class="min-h-screen flex md:flex-col lg:flex-row justify-center dark:bg-gray-400">
     <Box class="w-full lg:w-1/4">{/* Placeholder for sidebar */}</Box>
     <Container class="w-full lg:w-1/2">{props.children}</Container>
     <Box class="w-full lg:w-1/4">{/* Placeholder for sidebar */}</Box>
