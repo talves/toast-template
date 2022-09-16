@@ -8,7 +8,7 @@ import Footer from "./footer.js";
 import { useSiteData } from "../../site-data-provider.js";
 
 export const FlexLayout = (props) => (
-  <Box as="div" {...props}>
+  <Box as="div" class="min-h-screen" {...props}>
     {props.children}
   </Box>
 );

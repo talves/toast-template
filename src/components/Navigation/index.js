@@ -10,7 +10,7 @@ const Navigation = (props) => {
     <Box
       as="nav"
       id="navbar-default"
-      class={`fixed top-12 bottom-0 ${toggle ? "right-0" : "-right-full"} w-52 md:static ${props.class} transition-all duration-300`}
+      class={`fixed top-12 bottom-0 ${toggle ? "right-0" : "-right-full"} w-52 md:w-auto md:static ${props.class} transition-all duration-300`}
     >
       <Nav>
         {data.menu &&

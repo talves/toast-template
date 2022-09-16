@@ -30,19 +30,19 @@ const WrapperSection = (props) => {
   const { copyright = "copyright", social = {} } = data;
 
   return (
-    <Box>
+    <Box class="items-center">
       <Box class="flex flex-row items-center">
         <SocialLink
           class="my-auto p-2"
           to={`https://twitter.com/${social.twitterUsername || ""}`}
         >
-          <TwitterIcon class="fill-primary-800 dark:fill-primary-200 text-primary-100 inline-block h-10 w-10" />
+          <TwitterIcon class="fill-primary-800 dark:fill-primary-200 text-primary-100 inline-block h-6 w-6" />
         </SocialLink>
         <SocialLink
           class="my-auto p-4 dark:text-primary-100"
           to={`https://github.com/${social.githubUsername || ""}`}
         >
-          <GitHubIcon class="fill-primary-800 dark:fill-primary-200 text-primary-100 inline-block h-10 w-10" />
+          <GitHubIcon class="fill-primary-800 dark:fill-primary-200 text-primary-100 inline-block h-6 w-6" />
         </SocialLink>
         <Box class="my-auto p-4 text-primary-800 font-bold inline-block dark:text-primary-200">
           © {copyright}

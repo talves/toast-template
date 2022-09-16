@@ -8,13 +8,13 @@ export const Example = (props) => {
   // console.log(`${JSON.stringify(header, null, 2)}`);
 
   return (
-    <div class="flex min-h-screen flex-col items-center justify-center py-2">
+    <div class="flex flex-col items-center justify-center py-2 min-h-screen pb-56">
       <Helmet>
         <title>{`Web - ${header?.title}`}</title>
         <link rel="icon" href="/favicon.ico" />
       </Helmet>
 
-      <main class="mx-auto w-auto px-4 pt-16 pb-8 sm:pt-24 lg:px-8">
+      <div class="mx-auto h-4/5 w-auto px-4 pt-16 pb-8 sm:pt-24 lg:px-8">
         <h1 class="mx-auto max-w-5xl text-center text-6xl font-extrabold leading-[1.1] tracking-tighter text-white sm:text-7xl lg:text-8xl xl:text-8xl">
           Example <br class="hidden lg:block" />
           <span class="inline-block bg-gradient-to-r from-brandblue to-brandred bg-clip-text text-transparent">
@@ -33,7 +33,7 @@ export const Example = (props) => {
             </Box>
           </Box>
         </div>
-      </main>
+      </div>
     </div>
   );
 };
