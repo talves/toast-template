@@ -20,6 +20,14 @@
       "type": "page",
       "path": "/about",
       "heading": "default"
+    },
+    {
+      "path": "/a-post",
+      "hidden": false,
+      "label": "Mdx Post",
+      "type": "page",
+      "heading": "default"
     }
+
   ]
 }

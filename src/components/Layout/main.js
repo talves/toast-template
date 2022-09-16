@@ -25,7 +25,7 @@ const PageWrapper = (props) => (
 );
 
 const ListPageWrapper = (props) => (
-  <MainWrapper class="bg-default flex md:flex-col lg:flex-row justify-center">
+  <MainWrapper class="min-h-screen bg-default flex md:flex-col lg:flex-row justify-center">
     <Box class="w-full lg:w-1/4">{/* Placeholder for sidebar */}</Box>
     <Container class="w-full lg:w-1/2">{props.children}</Container>
     <Box class="w-full lg:w-1/4">{/* Placeholder for sidebar */}</Box>
