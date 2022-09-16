@@ -7,19 +7,19 @@ import Footer from "./footer.js";
 // import SEO from "../seo/index.js";
 import { useSiteData } from "../../site-data-provider.js";
 
-export const FlexLayout = (props) => {
-  if (typeof window !== "undefined") {
-    if (
-      localStorage.getItem("color-theme") === "dark" ||
-      (!("color-theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+if (typeof window !== "undefined") {
+  if (
+    localStorage.getItem("color-theme") === "dark" ||
+    (!("color-theme" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
   }
+}
 
+export const FlexLayout = (props) => {
   return (
     <Box as="div" class="min-h-screen" {...props}>
       {props.children}

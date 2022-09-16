@@ -34,7 +34,6 @@ function keepTheme() {
 
 export const ThemeSwitcher = ({ as = "div", ...props }) => {
   const [toggleClass, setToggleClass] = useState(getTheme());
-
   const handleOnClick = () => {
     if (localStorage.getItem("color-theme") === "dark") {
       setTheme("light");

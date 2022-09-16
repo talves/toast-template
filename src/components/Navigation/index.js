@@ -6,7 +6,6 @@ import { ThemeSwitcher } from "../Buttons/ThemeSwitcher.js";
 
 const Navigation = (props) => {
   const { data, toggle } = props;
-
   return (
     <Box
       as="nav"

@@ -29,9 +29,15 @@ export const useSiteData = () => {
   return context;
 };
 
-export const SiteDataProvider = ({ data = {}, url, children }) => {
-  const [state, updateContext] = useReducer(sitedataReducer, data);
+export const SiteDataProvider = ({ data, url, children }) => {
+  const [state, updateContext] = useReducer(sitedataReducer, data || {});
+
   useEffect(() => {
+    if (!data) return;
+    if (typeof data === 'undefined') throw new Error(
+      // this error should never be thrown, the previous return should catch it
+      `SiteDataProvider is missing attribute property data.\nUse within <SiteDataProvider data={{}} url="/settings.json">`
+    );
     updateContext({
       type: "UPDATE",
       data,
