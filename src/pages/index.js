@@ -5,7 +5,7 @@ import { useSiteData } from "../site-data-provider.js";
 export default (props) => {
   const data = useSiteData();
   return (
-    <Box class="bg-gray-400 font-sans leading-normal tracking-normal">
+    <Box class="bg-gray-400 font-sans leading-normal tracking-normal dark:bg-gray-700">
       <Example header={data?.header}/>
     </Box>
   );
