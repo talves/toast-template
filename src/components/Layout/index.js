@@ -7,11 +7,25 @@ import Footer from "./footer.js";
 // import SEO from "../seo/index.js";
 import { useSiteData } from "../../site-data-provider.js";
 
-export const FlexLayout = (props) => (
-  <Box as="div" class="min-h-screen" {...props}>
-    {props.children}
-  </Box>
-);
+export const FlexLayout = (props) => {
+  if (typeof window !== "undefined") {
+    if (
+      localStorage.getItem("color-theme") === "dark" ||
+      (!("color-theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }
+
+  return (
+    <Box as="div" class="min-h-screen" {...props}>
+      {props.children}
+    </Box>
+  );
+};
 
 export default ({ children, ...props }) => {
   const data = useSiteData();
@@ -42,8 +56,9 @@ export default ({ children, ...props }) => {
         <meta name="theme-color" content="#718096"></meta>
         <link rel="stylesheet" href="/styles.css" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+        <script type="text/javascript"></script>
       </Helmet>
-      <Header header={props.header} data={data?.navigation}/>
+      <Header header={props.header} data={data?.navigation} />
       <Main {...props}>{children}</Main>
       <Footer data={data?.navigation?.footer} />
     </FlexLayout>
