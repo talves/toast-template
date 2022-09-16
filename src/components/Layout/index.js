@@ -8,14 +8,19 @@ import Footer from "./footer.js";
 import { useSiteData } from "../../site-data-provider.js";
 
 if (typeof window !== "undefined") {
-  if (
-    localStorage.getItem("color-theme") === "dark" ||
-    (!("color-theme" in localStorage) &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches)
-  ) {
-    document.documentElement.classList.add("dark");
+  let theme = localStorage.getItem("color-theme");
+  if (theme === null || !["dark", "light"].includes(theme)) {
+    console.log(`checking system pref`);
+    const systemSetToDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    theme = systemSetToDark ? "dark" : "light";
+  }
+  if (["dark", "light"].includes(theme)) {
+    document.documentElement.classList.remove(theme === "dark" ? "light" : "dark");
+      document.documentElement.classList.add(theme);
   } else {
-    document.documentElement.classList.remove("dark");
+    document.documentElement.classList.remove("light");
   }
 }
 

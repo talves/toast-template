@@ -2,51 +2,48 @@ import { h } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import { Box } from "../Box.js";
 
-function setTheme(themeName) {
-  localStorage.setItem("color-theme", themeName);
-  document.documentElement.className = themeName;
-}
-
-function getStorageTheme() {
-  let theme = "light";
-  if (typeof window !== "undefined") {
-    theme = localStorage.getItem("color-theme");
-  }
-  if (theme === "" || theme === null) {
-    setTheme("light");
-    return "light";
-  } else {
-    return theme;
-  }
-}
-
-function keepTheme() {
-  if (localStorage.getItem("color-theme")) {
-    if (localStorage.getItem("color-theme") === "dark") {
-      setTheme("dark");
-    } else if (localStorage.getItem("color-theme") === "light") {
-      setTheme("light");
-    }
-  } else {
-    setTheme("dark");
-  }
-}
 
 export const ThemeSwitcher = ({ as = "div", ...props }) => {
   const [toggleClass, setToggleClass] = useState(getStorageTheme());
+
+  function setTheme(themeName) {
+    if (typeof window !== "undefined") {
+      // console.log(`setTheme: ${themeName}`);
+      localStorage.setItem("color-theme", themeName);
+      document.documentElement.classList.remove(themeName === "dark" ? "light" : "dark");
+      document.documentElement.classList.add(themeName);
+    }
+  }
+  
+  function getStorageTheme() {
+    let theme = "light";
+    if (typeof window !== "undefined") {
+      theme = localStorage.getItem("color-theme");
+    }
+    if (theme === "" || theme === null) {
+      // console.log(`checking system pref`)
+      const systemSetToDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      theme = systemSetToDark ? "dark" : "light";
+  
+      setTheme(theme);
+    }
+    return theme;
+  }
+  
   const handleOnClick = () => {
-    if (localStorage.getItem("color-theme") === "dark") {
-      setTheme("light");
+    const theme = getStorageTheme();
+    if (theme === "dark") {
       setToggleClass("light");
     } else {
-      setTheme("dark");
       setToggleClass("dark");
     }
   };
 
   useEffect(() => {
-console.log(`toggle: ${toggleClass}`)
-  }, [toggleClass])
+    setTheme(toggleClass);
+  }, [toggleClass]);
 
   return (
     <Box as={as} {...props}>
@@ -59,7 +56,9 @@ console.log(`toggle: ${toggleClass}`)
       >
         <svg
           id="theme-toggle-dark-icon"
-          class={`w-5 h-5 ${toggleClass === "dark" ? "" : "hidden"} fill-gray-600 dark:fill-gray-200`}
+          class={`w-5 h-5 ${
+            toggleClass === "dark" ? "" : "hidden"
+          } fill-gray-600 dark:fill-gray-200`}
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -67,7 +66,9 @@ console.log(`toggle: ${toggleClass}`)
         </svg>
         <svg
           id="theme-toggle-light-icon"
-          class={`w-5 h-5 ${toggleClass === "dark" ? "hidden" : ""} fill-gray-600 dark:fill-gray-200`}
+          class={`w-5 h-5 ${
+            toggleClass === "dark" ? "hidden" : ""
+          } fill-gray-600 dark:fill-gray-200`}
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
         >
