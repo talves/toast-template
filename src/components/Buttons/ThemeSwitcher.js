@@ -7,12 +7,12 @@ function setTheme(themeName) {
   document.documentElement.className = themeName;
 }
 
-function getTheme() {
+function getStorageTheme() {
   let theme = "light";
   if (typeof window !== "undefined") {
     theme = localStorage.getItem("color-theme");
   }
-  if (theme === "") {
+  if (theme === "" || theme === null) {
     setTheme("light");
     return "light";
   } else {
@@ -33,7 +33,7 @@ function keepTheme() {
 }
 
 export const ThemeSwitcher = ({ as = "div", ...props }) => {
-  const [toggleClass, setToggleClass] = useState(getTheme());
+  const [toggleClass, setToggleClass] = useState(getStorageTheme());
   const handleOnClick = () => {
     if (localStorage.getItem("color-theme") === "dark") {
       setTheme("light");
@@ -43,6 +43,10 @@ export const ThemeSwitcher = ({ as = "div", ...props }) => {
       setToggleClass("dark");
     }
   };
+
+  useEffect(() => {
+console.log(`toggle: ${toggleClass}`)
+  }, [toggleClass])
 
   return (
     <Box as={as} {...props}>
