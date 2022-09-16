@@ -4,7 +4,7 @@ import { Box } from "../components/Box.js";
 export default (props) => (
   <Box>
     <Box as="div" class="h-20 items-center">
-      <Box as="h1" class="text-center">Posts</Box>
+      <Box as="h1" class="text-center text-5xl mt-4 font-medium text-primary-900 dark:text-primary-700">Posts</Box>
     </Box>
     <div class="shadow sm:rounded-lg dark:bg-gray-200">
       <ul class="list-disc space-y-2">

@@ -7,6 +7,7 @@ import Footer from "./footer.js";
 // import SEO from "../seo/index.js";
 import { useSiteData } from "../../site-data-provider.js";
 
+// setup ThemeSwitcher for color theme dark/light mode
 if (typeof window !== "undefined") {
   let theme = localStorage.getItem("color-theme");
   if (theme === null || !["dark", "light"].includes(theme)) {

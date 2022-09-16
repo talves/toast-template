@@ -7,7 +7,7 @@ export default (props) => {
   return (
     <Box class="min-h-screen">
       <Box as="div" class="h-20 items-center">
-        <Box as="h1" class="text-center">
+        <Box as="h1" class="text-3xl mt-4 text-center">
           About
         </Box>
       </Box>
