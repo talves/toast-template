@@ -6,6 +6,7 @@ import Main from "./main.js";
 import Footer from "./footer.js";
 // import SEO from "../seo/index.js";
 import { useSiteData } from "../../site-data-provider.js";
+import SEO from "../seo/index.js";
 
 // setup ThemeSwitcher for color theme dark/light mode
 if (typeof window !== "undefined") {
@@ -40,6 +41,7 @@ export default ({ children, ...props }) => {
     <FlexLayout>
       <Helmet>
         <html lang="en" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
         <link
           rel="apple-touch-icon"
           sizes="152x152"
@@ -62,8 +64,8 @@ export default ({ children, ...props }) => {
         <meta name="theme-color" content="#718096"></meta>
         <link rel="stylesheet" href="/styles.css" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-        <script type="text/javascript"></script>
       </Helmet>
+      <SEO pageMeta={props?.meta} />
       <Header header={props.header} data={data?.navigation} />
       <Main {...props}>{children}</Main>
       <Footer data={data?.navigation?.footer} />

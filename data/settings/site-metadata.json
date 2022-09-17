@@ -1,0 +1,13 @@
+{
+  "twitterUsername": "talvesdev",
+  "author": "Tony Alves",
+  "url": "https://toast-template.netlify.app",
+  "titleTemplate": "%s | Tony Alves",
+  "organization": "talves",
+  "owner": "Tony Alves",
+  "facebookAppID": "facebookID",
+  "title": "Toast Template",
+  "image": "/web-root-dark.png",
+  "description": "Toast Template created for an example of a toast site. Toast was written using Rust.",
+  "twitterCardType": "summary_large_image"
+}
