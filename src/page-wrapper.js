@@ -55,6 +55,7 @@ const mdxComponents = {
 
 export default function PageWrapper(props) {
   props.children.props.components = mdxComponents;
+  const { meta = {} } = props;
   // if (props?.components === undefined) {
   //   props.components = mdxComponents;
   // }
@@ -62,7 +63,7 @@ export default function PageWrapper(props) {
   return (
     <SiteDataProvider url="/settings.json">
       <MDXProvider components={mdxComponents}>
-        <Layout header="Toast Template">{props.children}</Layout>
+        <Layout header="Toast Template" meta={meta}>{props.children}</Layout>
       </MDXProvider>
     </SiteDataProvider>
   );

@@ -1,9 +1,22 @@
 export const meta = {
-  title: "A Post",
+  "title": "An example post (mdx)",
   slug: "/a-post",
+  "draft": false,
+  "date": "2019-10-03T22:30:00.000Z",
+  "update": "2020-12-09T22:46:08.045Z",
+  "description": "example post for the template",
+  "categories": [
+    "test"
+  ],
+  "keywords": [
+    "example",
+    "garden"
+  ],
+  "image": "/images/social/a-post.png",
+  "author": "talves"
 };
 
-# A Post
+# {meta.title}
 
 and some content
 
@@ -15,7 +28,7 @@ const thing = {};
 
 - Number one
 - line 2
-- Three
+- Three 
 
 ```js
 export const meta = {
@@ -24,4 +37,4 @@ export const meta = {
 };
 ```
 
-<Box as="h4" class="heading h3-mdx">This is a component</Box>
+<Box as="h4" class="heading h3-mdx">This is a component in {meta.title}</Box>
