@@ -28,7 +28,7 @@ if (typeof window !== "undefined") {
 
 export const FlexLayout = (props) => {
   return (
-    <Box as="div" class="min-h-screen" {...props}>
+    <Box as="div" class="min-h-screen bg-gray-100 dark:bg-primary-900" {...props}>
       {props.children}
     </Box>
   );

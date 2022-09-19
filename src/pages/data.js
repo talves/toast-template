@@ -11,7 +11,7 @@ export default (props) => {
         <div as="div" class="">
           Site Data JSON
         </div>
-        <pre class="overflow-scroll">{JSON.stringify(data, null, 2)}</pre>
+        <pre>{JSON.stringify(data, null, 2)}</pre>
       </div>
       <div class="w-20"></div>
     </div>
