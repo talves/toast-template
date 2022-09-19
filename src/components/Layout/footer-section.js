@@ -35,12 +35,14 @@ const WrapperSection = (props) => {
         <SocialLink
           class="my-auto p-2"
           to={`https://twitter.com/${social.twitterUsername || ""}`}
+          aria-label={`Twiter Link to ${social.twitterUsername || ""}`}
         >
           <TwitterIcon class="fill-primary-800 dark:fill-primary-200 text-primary-100 inline-block h-6 w-6" />
         </SocialLink>
         <SocialLink
           class="my-auto p-4 dark:text-primary-100"
           to={`https://github.com/${social.githubUsername || ""}`}
+          aria-label={`Twiter Link to ${social.twitterUsername || ""}`}
         >
           <GitHubIcon class="fill-primary-800 dark:fill-primary-200 text-primary-100 inline-block h-6 w-6" />
         </SocialLink>

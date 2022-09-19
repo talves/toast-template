@@ -22,7 +22,7 @@ export const Example = (props) => {
         </h1>
         <div class="mx-auto mt-5 max-w-xl sm:flex sm:justify-center md:mt-8">
           <Box class="rounded-md">
-            <Box as="a" href="https://toast.dev" target="_blank" referrer="">
+            <Box as="a" href="https://toast.dev" target="_blank" aria-label="Go to test site. New Tab.">
               <Box class="flex w-full items-center justify-center rounded-md border border-transparent px-8 py-3 font-medium text-white no-underline bg-gray-300 hover:bg-gray-500 dark:bg-gray-800 dark:text-gray-500 dark:hover:text-gray-800 dark:hover:bg-gray-500 md:py-3 md:px-10 md:text-2xl md:leading-6">
                 Toast Site
                 <span class="ml-2 bg-gradient-to-r from-brandred to-brandblue bg-clip-text text-transparent">
