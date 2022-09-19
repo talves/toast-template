@@ -52,7 +52,7 @@ export const ThemeSwitcher = ({ as = "div", ...props }) => {
         id="theme-toggle"
         type="button"
         role="button"
-        area-label={`Color Theme Switcher${
+        aria-label={`Color Theme Switcher${
           toggleClass === " click for light" ? "" : " click for dark"
         }`}
         onClick={handleOnClick}
