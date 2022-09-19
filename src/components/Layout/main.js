@@ -25,10 +25,10 @@ const PageWrapper = (props) => (
 );
 
 const ListPageWrapper = (props) => (
-  <MainWrapper class="min-h-screen flex md:flex-col lg:flex-row justify-center dark:bg-gray-400">
-    <Box class="w-full lg:w-1/4">{/* Placeholder for sidebar */}</Box>
-    <Container class="w-full lg:w-1/2">{props.children}</Container>
-    <Box class="w-full lg:w-1/4">{/* Placeholder for sidebar */}</Box>
+  <MainWrapper class="min-h-screen flex  justify-center dark:bg-gray-400">
+    <Box class="w-4 lg:w-1/4 md:w-2/12 sm:w-1/12 ">{/* Placeholder for sidebar */}</Box>
+    <Container class="w-full lg:2/4 md:w-8/12 sm:w-10/12">{props.children}</Container>
+    <Box class="w-4 lg:w-1/4 md:w-2/12 sm:w-1/12">{/* Placeholder for sidebar */}</Box>
   </MainWrapper>
 );
 
