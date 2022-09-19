@@ -22,7 +22,7 @@ const Navigation = (props) => {
             .filter((k) => !k.hidden)
             .map((item, index) => {
               return (
-                <NavItem key={index} href={item.path}>
+                <NavItem key={index} href={item.path} isActive={JSON.stringify(location?.pathname===item.path)}>
                   {item.label}
                 </NavItem>
               );
