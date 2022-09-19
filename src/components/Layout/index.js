@@ -63,7 +63,6 @@ export default ({ children, ...props }) => {
         <meta name="msapplication-TileColor" content="#718096" />
         <meta name="theme-color" content="#718096"></meta>
         <link rel="stylesheet" href="/styles.css" />
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Helmet>
       <SEO pageMeta={props?.meta} />
       <Header header={props.header} data={data?.navigation} />
